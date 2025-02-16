@@ -11,54 +11,59 @@
     <link rel="stylesheet" href="../styles/plantas.css">
 </head>
 <body>
-<header>
-    <nav class="menu-lateral">
-        <div class="btn-expandir">
-            <i class="bi bi-list"></i>
-        </div>
-        <ul>
-            <li class="item-menu">
-                <a href="#">
-                    <span class="icon"><i class="bi bi-person-circle"></i></span>
-                    <span class="texto">Maria Eduarda</span>
-                </a>
+    <header>
+        <img src="../icons/outralogo.png" alt="Logo" class="logo">
+        <nav class="menu-lateral">
+            <div class="btn-expandir">
+                <i class="bi bi-list"></i>
+            </div>
+            <ul>
                 <li class="item-menu">
-                    <a href="main.html">
-                        <span class="icon"><i class="bi bi-bookmark-star-fill"></i></span>
-                        <span class="texto">Principal</span>
+                    <a href="#">
+                        <span class="icon"><i class="bi bi-person-circle"></i></span>
+                        <span class="texto">Maria Eduarda</span>
+                    </a>
+                    <li class="item-menu">
+                        <a href="main.html">
+                            <span class="icon"><i class="bi bi-bookmark-star-fill"></i></span>
+                            <span class="texto">Principal</span>
+                        </a>
+                    </li>
+                </li>
+                <li class="item-menu">
+                    <a href="../index.html">
+                        <span class="icon"><i class="bi bi-house-door-fill"></i></span>
+                        <span class="texto">Início</span>
                     </a>
                 </li>
-            </li>
-            <li class="item-menu drop-hover">
-                <a href="#" class="menu-toggle">
-                    <span class="icon"><i class="bi bi-flower2"></i></span>
-                    <span class="texto">Plantas Cadastradas</span>
-                </a>
-                <ul class="drop">
-                    <li><a href="planta1.html" class="submenu">Planta 1</a></li>
-                    <li><a href="planta2.html" class="submenu">Planta 2</a></li>
-                    <li><a href="planta3.html" class="submenu">Planta 3</a></li>
-                    <li><a href="planta4.html" class="submenu">Planta 4</a></li>
-                    <li><a href="planta5.html" class="submenu">Planta 5</a></li>
-                    <li><a href="planta6.html" class="submenu">Planta 6</a></li>
-                </ul>
-            </li>                
-            <li class="item-menu">
-                <a href="../index.html">
-                    <span class="icon"><i class="bi bi-house-door-fill"></i></span>
-                    <span class="texto">Início</span>
-                </a>
-            </li>
-            <li class="item-menu">
-                <a href="#">
-                    <span class="icon"><i class="bi bi-telephone-fill"></i></span>
-                    <span class="texto">Contatos</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<img src="../icons/outralogo.png" alt="Logo" class="logo">
+                <li class="item-menu drop-hover">
+                    <a href="#" class="menu-toggle">
+                        <span class="icon"><i class="bi bi-flower2"></i></span>
+                        <span class="texto">Plantas Cadastradas</span>
+                    </a>
+                    <ul class="drop">
+                        <li><a href="planta1.html" class="submenu">Planta 1</a></li>
+                        <li><a href="planta2.html" class="submenu">Planta 2</a></li>
+                        <li><a href="planta3.html" class="submenu">Planta 3</a></li>
+                        <li><a href="planta4.html" class="submenu">Planta 4</a></li>
+                        <li><a href="planta5.html" class="submenu">Planta 5</a></li>
+                    </ul>
+                </li>                            
+                <li class="item-menu">
+                    <a href="../pages/pesquisas.html">
+                        <span class="icon"><i class="bi bi-book"></i></span>
+                        <span class="texto">Projetos</span>
+                    </a>
+                </li>
+                <li class="item-menu">
+                    <a href="#">
+                        <span class="icon"><i class="bi bi-telephone-fill"></i></span>
+                        <span class="texto">Contatos</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
     <h1>blablabla</h1>
     <section1> 
         <div class="card card3">
@@ -101,6 +106,37 @@
                 }
             });
         });
-        </script>   
+        </script>
+    <aside id="contatos-aside" class="aside-contatos">
+        <div class="aside-content">
+            <span id="close-aside" class="close-btn">&times;</span>
+            <h2>Entre em Contato</h2>
+            <p>Email: botanica@projeto.com</p>
+            <p>Telefone: (63) 4002-8922</p>
+            <p>Redes sociais: @botanica_ambiental</p>
+        </div>
+    </aside>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const contatosLink = document.querySelector('.item-menu a .bi-telephone-fill').parentElement; 
+            const asideContatos = document.getElementById("contatos-aside");
+            const closeAside = document.getElementById("close-aside");
+    
+            contatosLink.addEventListener("click", function (event) {
+                event.preventDefault();
+                asideContatos.classList.toggle("active");
+            });
+    
+            closeAside.addEventListener("click", function () {
+                asideContatos.classList.remove("active");
+            });
+    
+            document.addEventListener("click", function (event) {
+                if (!asideContatos.contains(event.target) && !contatosLink.contains(event.target)) {
+                    asideContatos.classList.remove("active");
+                }
+            });
+        });
+    </script>
 </body>
 </html>

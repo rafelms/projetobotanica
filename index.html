@@ -71,6 +71,37 @@
                 e esperamos que o Projeto Botânica inspire novas iniciativas em prol da natureza. Juntos, podemos preservar o futuro das nossas espécies nativas! 🌱
             </p>
         </div>
-    <section>   
+    <section>
+        <aside id="contatos-aside" class="aside-contatos">
+            <div class="aside-content">
+                <span id="close-aside" class="close-btn">&times;</span>
+                <h2>Entre em Contato</h2>
+                <p>Email: botanica@projeto.com</p>
+                <p>Telefone: (63) 4002-8922</p>
+                <p>Redes sociais: @botanica_ambiental</p>
+            </div>
+        </aside>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const contatosLink = document.querySelector('.item-menu a .bi-telephone-fill').parentElement; 
+                const asideContatos = document.getElementById("contatos-aside");
+                const closeAside = document.getElementById("close-aside");
+        
+                contatosLink.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    asideContatos.classList.toggle("active");
+                });
+        
+                closeAside.addEventListener("click", function () {
+                    asideContatos.classList.remove("active");
+                });
+        
+                document.addEventListener("click", function (event) {
+                    if (!asideContatos.contains(event.target) && !contatosLink.contains(event.target)) {
+                        asideContatos.classList.remove("active");
+                    }
+                });
+            });
+        </script>   
 </body>
 </html>

@@ -15,7 +15,7 @@ body {
     width: 80px; 
     display: block;
     margin: auto;
-
+    margin-top: 20px;
 }
 
 h1{
@@ -163,4 +163,31 @@ ul li.item-menu a .icon > i{
 /* Mantém visível ao clicar */
 .drop.active {
     display: flex !important;
+}
+
+.aside-contatos {
+    position: fixed;
+    right: -300px; /* Mantém fora da tela inicialmente */
+    top: 0;
+    width: 300px;
+    height: 100vh;
+    background: rgba(0, 128, 0, 0.9); /* Verde semi-transparente */
+    transition: right 0.3s ease-in-out;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    color: white;
+    z-index: 1000;
+}
+
+.aside-contatos.active {
+    right: 0; /* Move para dentro da tela */
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
 }
