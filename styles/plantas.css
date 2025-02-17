@@ -48,6 +48,7 @@ section1, section2 {
 .card>p{
     font: 15px;
     padding: 20px 20px;
+    text-align: justify;
 }
 
 .card>img{

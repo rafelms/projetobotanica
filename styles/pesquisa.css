@@ -283,6 +283,7 @@ ul li.item-menu a .icon > i{
     padding: 20px;
     border-radius: 10px;
     box-shadow: 4px 4px 10px rgba(243, 243, 243, 0.5);
+    text-align: justify;
 }
 
 .text-pesquisa h2 {
