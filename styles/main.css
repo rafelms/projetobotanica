@@ -28,6 +28,7 @@ h1{
 section1, section2 {
     display: flex;
     justify-content: center;
+    padding-left: 70px;
 }
 
 .card {
