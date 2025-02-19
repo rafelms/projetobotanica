@@ -25,7 +25,7 @@ section {
     margin-top: 20px;
 }
 
-h1{
+h1, h2{
     color:#f1e8e8;
     margin: 50px;
     margin-bottom: 5px;
@@ -36,7 +36,7 @@ h1{
     margin: 50px;
     background-color: #070606;
     width: 600px;
-    height: 780px;
+    height: 800px;
     border-radius: 15px;
     text-align: center;
     box-shadow: rgba(51, 204, 51, 0.5) 0px 6px 12px -2px;
@@ -44,7 +44,7 @@ h1{
 
 .card>h2{
     font-size: 16px;
-    padding-top: 10px;
+    padding-top: none;
 }
 
 .card>p{
@@ -57,26 +57,7 @@ h1{
     width: 100%;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-}
-
-.botao{
-    font-size: 17px;
-    padding: 10px 50px;
-    background-color: rgba(51, 204, 51, 0.5);
-    color: #f3efef;
-    border-radius: 10px;
-    font-weight: 600;
-    transition: 0.5s background;
-    cursor: pointer;
-    font-family: 'Poppins', sans-serif;
-}
-
-.botao > a{
-    text-decoration: none;
-    color: #f3efef
-}
-.botao:hover{
-    background: #333333;
+    padding-bottom: 0;
 }
 
 nav.menu-lateral{
